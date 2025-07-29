@@ -17,6 +17,7 @@ import { NotificationsPage } from "./pages/NotificationPage";
 const isAuthenticated = () => !!localStorage.getItem("token");
 
 // A component to protect routes that require a user to be logged in
+// PrivateRoute component
 const PrivateRoute = ({ children }) => {
   return isAuthenticated() ? children : <Navigate to="/login" />;
 };
